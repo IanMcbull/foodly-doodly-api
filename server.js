@@ -12,7 +12,6 @@ app.use(express.urlencoded({extended:false}))
 // Testing the get request
 app.use(router)
 
-
 app.listen(port,()=>{
     console.log(`listening on port: ${colors.yellow(port)}`);
 })
