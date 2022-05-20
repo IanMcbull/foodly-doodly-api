@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-// Route Handlers
+// Route Handler
 app.use(recipes)
 app.use('/food', food)
 app.use('/products', products)
