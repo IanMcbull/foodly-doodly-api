@@ -128,7 +128,7 @@ You can pass in the following parameters to the url:
 Here are a few examples:
 
 ```
-https://gentle-river-67706.herokuapp.com/ingedients/?ingredients=onion&number=30
+https://gentle-river-67706.herokuapp.com/ingredients/?ingredients=onion&number=30
 ```
 
 ```
