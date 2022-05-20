@@ -134,7 +134,7 @@ https://gentle-river-67706.herokuapp.com/ingredients/?ingredients=onion&number=3
 ```
 https://gentle-river-67706.herokuapp.com/ingredients/number=30&ingredients=pineapple,+apple
 ```
-___
+***
 
 
 ### FOOD ENDPOINT
@@ -167,5 +167,67 @@ https://gentle-river-67706.herokuapp.com/food/?query=seafood
     "offset": 0,
     "number": 10,
     "totalResults": 3
+}
+```
+
+You can pass in the following parameters to the url:
+- query (*This refers to the name of the food you are looking for e.g:fish*)
+- number (*optional*)
+
+Here is an example:
+
+```
+https://gentle-river-67706.herokuapp.com/food/?query=fish&number=30
+```
+***
+### PRODUCT ENDPOINT
+
+```
+https://gentle-river-67706.herokuapp.com/product/?query=succotash
+```
+
+**The response from the server**:
+
+```json
+{
+    "type": "product",
+    "products": [
+        {
+            "id": 13983,
+            "title": "Margaret Holmes Triple Succotash, Canned Vegetables, 14.5 oz",
+            "image": "https://spoonacular.com/productImages/13983-312x231.png",
+            "imageType": "png"
+        },
+        {
+            "id": 88854,
+            "title": "Hanover The Silver Line Succotash Premium, 16 oz",
+            "image": "https://spoonacular.com/productImages/88854-312x231.jpeg",
+            "imageType": "jpeg"
+        },
+        {
+            "id": 186612,
+            "title": "Margaret Holmes Buttered Double Succotash, 15 Oz",
+            "image": "https://spoonacular.com/productImages/186612-312x231.jpeg",
+            "imageType": "jpeg"
+        },
+        {
+            "id": 132367,
+            "title": "Seneca Foods Libbys  Whole Kernel Succotash, 15.25 oz",
+            "image": "https://spoonacular.com/productImages/132367-312x231.jpeg",
+            "imageType": "jpeg"
+        },
+        {
+            "id": 177634,
+            "title": "Ahold Succotash",
+            "image": "https://spoonacular.com/productImages/177634-312x231.jpg",
+            "imageType": "jpg"
+        }
+    ],
+    "offset": 0,
+    "number": 5,
+    "totalProducts": 8,
+    "processingTimeMs": 13,
+    "expires": 1653300825238,
+    "isStale": false
 }
 ```
