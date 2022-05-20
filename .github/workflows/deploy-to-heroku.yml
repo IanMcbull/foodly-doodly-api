@@ -25,4 +25,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Deploy to heroku
-        run: git push heroku main
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "gentle-river-67706" #Must be unique in Heroku
+          heroku_email: "ianmugenya@gmail.com"
