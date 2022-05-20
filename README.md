@@ -183,7 +183,7 @@ https://gentle-river-67706.herokuapp.com/food/?query=fish&number=30
 ### PRODUCT ENDPOINT
 
 ```
-https://gentle-river-67706.herokuapp.com/product/?query=succotash
+https://gentle-river-67706.herokuapp.com/products/?query=succotash
 ```
 
 **The response from the server**:
