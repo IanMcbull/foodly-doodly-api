@@ -134,3 +134,38 @@ https://gentle-river-67706.herokuapp.com/ingedients/?ingredients=onion&number=30
 ```
 https://gentle-river-67706.herokuapp.com/ingredients/number=30&ingredients=pineapple,+apple
 ```
+___
+
+
+### FOOD ENDPOINT
+
+```
+https://gentle-river-67706.herokuapp.com/food/?query=seafood
+```
+
+**The response from the server**:
+
+```json
+{
+    "results": [
+        {
+            "id": 6963,
+            "name": "seafood stock",
+            "image": "chicken-broth.png"
+        },
+        {
+            "id": 1032034,
+            "name": "seafood seasoning",
+            "image": "seasoning.jpg"
+        },
+        {
+            "id": 99284,
+            "name": "seafood mix",
+            "image": "shrimp.png"
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 3
+}
+```
