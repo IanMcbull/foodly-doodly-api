@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const colors = require('colors');
 const recipes = require('./routes/recipes');
 const food = require('./routes/food');
+const products = require('./routes/products');
 require('dotenv').config();
 app.use(morgan('dev'));
 app.use(express.json())
@@ -13,6 +14,7 @@ app.use(express.urlencoded({extended:false}))
 // Route Handlers
 app.use(recipes)
 app.use('/food', food)
+app.use('/products', products)
 
 app.listen(port,()=>{
     console.log(`listening on port: ${colors.yellow(port)}`);
