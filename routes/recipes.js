@@ -12,12 +12,19 @@ router.get('/', async(req, res)=>{
 })
 
 router.get('/ingredients',async(req,res)=>{
-    try{
-        const response = await axios(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.SPOONACULAR_API_KEY}&ingredients=${req.query.ingredients||''}&number=${req.query.number||5}`)
-        res.json(response.data);
-     }catch(err){
-       res.send(JSON.stringify(err));
-     }
+    if(!req.query.ingredients){
+        res.status(400).json({
+            statuscode: 400,           
+            msg:'The ingredients parameter is required. Please add it to your query'})
+    }
+    else{
+        try{
+            const response = await axios(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.SPOONACULAR_API_KEY}&ingredients=${req.query.ingredients||''}&number=${req.query.number||5}`)
+            res.json(response.data);
+         }catch(err){
+           res.send(JSON.stringify(err));
+         }
+    }
 })
 
 module.exports = router
