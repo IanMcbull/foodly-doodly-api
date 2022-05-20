@@ -43,11 +43,11 @@ You can pass in the following parameters to the url:
 Here are a few examples:
 
 ```
-https://gentle-river-67706.herokuapp.com/number=30
+https://gentle-river-67706.herokuapp.com/?number=30
 ```
 
 ```
-https://gentle-river-67706.herokuapp.com/number=30&query=pasta
+https://gentle-river-67706.herokuapp.com/?number=30&query=pasta
 ```
 
 ```
