@@ -8,6 +8,9 @@ Behind the scenes, the server is fetching data from [spoonacular APi](https://sp
 ```
 https://gentle-river-67706.herokuapp.com/
 ```
+##### **Description**
+This endpoint returns an object. The object contains an array called results which contains all the recipes.
+
 
 **The response from the server**:
 
@@ -58,6 +61,10 @@ You need to pass in either a single ingredient or a list of ingredients. This pa
 ```
 https://gentle-river-67706.herokuapp.com/ingredients/?ingredients=apple&number=1
 ```
+##### **Description**
+This endpoint returns an array of objects. The objects represent the recipes that have been found
+
+
 **The response from the server**:
 
 ```json
@@ -142,6 +149,8 @@ https://gentle-river-67706.herokuapp.com/ingredients/number=30&ingredients=pinea
 ```
 https://gentle-river-67706.herokuapp.com/food/?query=seafood
 ```
+##### **Description**
+This endpoint returns an object. The object has a results array that contains all the food items that were found
 
 **The response from the server**:
 
@@ -185,6 +194,8 @@ https://gentle-river-67706.herokuapp.com/food/?query=fish&number=30
 ```
 https://gentle-river-67706.herokuapp.com/products/?query=succotash
 ```
+##### Description
+This endpoint returns an object. The object contains two properties, a type property and a products property. The product property contains all the products that satisfied the query.
 
 **The response from the server**:
 
