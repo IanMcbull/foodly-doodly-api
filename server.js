@@ -6,12 +6,13 @@ const colors = require('colors');
 const recipes = require('./routes/recipes');
 const food = require('./routes/food');
 const products = require('./routes/products');
+const cors = require('cors')
 require('dotenv').config();
 app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-
-// Route Handler
+app.use(cors())
+// Route Handlers
 app.use(recipes)
 app.use('/food', food)
 app.use('/products', products)
