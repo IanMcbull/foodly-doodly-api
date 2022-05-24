@@ -7,11 +7,12 @@ const recipes = require('./routes/recipes');
 const food = require('./routes/food');
 const products = require('./routes/products');
 const cors = require('cors')
+app.use(cors())
 require('dotenv').config();
 app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(cors())
+
 // Route Handlers
 app.use(recipes)
 app.use('/food', food)
